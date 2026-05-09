@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #2c003e;
+  --secondary-color: #fe346e;
+  --bg-color: #1b1b2f;
+  --text-color: #e9e9e9;
+  --sidebar-bg: #162447;
+  --accent-color: #a29bfe;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--secondary-color);
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--primary-color);
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar li:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.sidebar li.active {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  font-weight: bold;
+}
+
+.content-area {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #1b1b2f 0%, #162447 100%);
+}
+
+.markdown-body {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.markdown-body h1 { color: var(--secondary-color); border-bottom: 1px solid var(--secondary-color); padding-bottom: 0.5rem; }
+.markdown-body h2 { color: var(--accent-color); margin-top: 2rem; }
+.markdown-body p { margin-bottom: 1rem; font-size: 1.1rem; }
+.markdown-body ul { margin-bottom: 1.5rem; }
+.markdown-body li { margin-bottom: 0.5rem; }
+
+.app-footer {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 0.5rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  border-top: 1px solid var(--secondary-color);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-color); }
+::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--secondary-color); }
