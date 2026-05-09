@@ -26,6 +26,8 @@ jobs:
           cache-dependency-path: codex-web/package-lock.json
       - name: Install dependencies
         run: cd codex-web && npm install
+      - name: Run Tests
+        run: cd codex-web && npm test
       - name: Build
         run: cd codex-web && npm run build
       - name: Setup Pages
